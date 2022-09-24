@@ -1,0 +1,41 @@
+// Indian Currency Counter based on new Monetization Policy after 2016
+// includes 2000, 500, 200, 100, 50, 20, 10, 5, 2, 1    --currency
+
+#include <iostream>
+using namespace std;
+
+// Main program declaration    
+int main()      
+{
+    int a;
+
+    // taking Total Amount as input
+    cout << "Enter the amount of money\n";         
+    cin >> a; 
+
+    // Checking if the user has entered Positive value 
+    if (a > 0)
+    {
+        // Executing Currency Counter!
+        cout << "Total number of notes\n";
+        cout << "2000 => " << a / 2000 << endl;
+        cout << "500 => " << (a % 2000) / 500 << endl;
+        cout << "200 => " << ((a % 2000) % 500) / 200 << endl;
+        cout << "100 => " << (((a % 2000) % 500) % 200) / 100 << endl;
+        cout << "50 => " << ((((a % 2000) % 500) % 200) % 100) / 50 << endl;
+        cout << "20 => " << (((((a % 2000) % 500) % 200) % 100) % 50) / 20 << endl;
+        cout << "10 => " << ((((((a % 2000) % 500) % 200) % 100) % 50) % 20) / 10 << endl;
+        cout << "5 => " << (((((((a % 2000) % 500) % 200) % 100) % 50) % 20) % 10) / 5 << endl;
+        cout << "2 => " << ((((((((a % 2000) % 500) % 200) % 100) % 50) % 20) % 10) % 5) / 2 << endl;
+        cout << "1 => " << ((((((((a % 2000) % 500) % 200) % 100) % 50) % 20) % 10) % 5) % 2 << endl;
+    }
+    else if (a == 0)
+    {
+        cout << "Amount is zero \n Program Terminated...!";
+    }
+    else
+    {
+        cout << "Amount is negative \n Program Terminated...! ";
+    }
+    return 0;
+}
