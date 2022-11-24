@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+
+int fibonacci(int number_of_terms) 
+{
+   if((number_of_terms==1)||(number_of_terms==0)) 
+   {
+      return(number_of_terms);
+   }
+   else 
+   {
+      return(fibonacci(number_of_terms-1)+fibonacci(number_of_terms-2));
+   }
+}
+
+int main() 
+{
+   int number_of_terms , i=0;
+   cout<<"Enter the number of terms of series : \n";
+   cin>>number_of_terms;
+
+   cout<<"\nFibonnaci Series : \n";
+   while(i<number_of_terms)
+   {
+      cout<<"   "<<fibonacci(i);
+      i++;
+   }
+   return 0;
+}
